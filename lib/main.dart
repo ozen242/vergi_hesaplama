@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vergi_hesaplama/screens/calculator.dart';
 import 'package:vergi_hesaplama/screens/kdv.dart';
-import 'package:vergi_hesaplama/screens/kdv_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,19 +51,7 @@ class HomeScreen extends StatelessWidget {
                   highlightColor: Colors.red[400],
                   textColor: Colors.white,
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 10)),
-              SizedBox(height: 10),
-              RaisedButton(
-                  child: Text(" Vergi Lİstesi "),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => KDVListPage()),
-                    );
-                  },
-                  color: Colors.deepPurple[700],
-                  highlightColor: Colors.red[400],
-                  textColor: Colors.white,
-                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10))
+            
             ],
           ),
         ),

@@ -41,14 +41,14 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: AppBar(
-          title: Text('KDV Hesaplama'), backgroundColor: Colors.deepPurple[600]),
+      // appBar: AppBar(
+      //     title: Text('KDV Hesaplama'), backgroundColor: Colors.deepPurple[600]),
       backgroundColor: Colors.deepPurple[100],
       body: Container(
         height: MediaQuery.of(context).size.height * 0.85,
         child: SingleChildScrollView(
           child: new Column(children: <Widget>[
-            SizedBox(height: MediaQuery.of(context).size.height*0.05),
+            SizedBox(height: MediaQuery.of(context).size.height*0.06),
             buildTutar(),
             buildKDVOrani(),
             buildRowButtons(),
@@ -157,7 +157,6 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
   Widget buildRowButtons() {
     return Container(
       height: MediaQuery.of(context).size.height * 0.08,
-      
       child: Row(
         children: [
           Flexible(
