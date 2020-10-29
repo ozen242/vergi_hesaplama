@@ -48,7 +48,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
         height: MediaQuery.of(context).size.height * 0.85,
         child: SingleChildScrollView(
           child: new Column(children: <Widget>[
-            SizedBox(height: MediaQuery.of(context).size.height*0.06),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.06),
             buildTutar(),
             buildKDVOrani(),
             buildRowButtons(),
@@ -65,7 +65,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
       height: MediaQuery.of(context).size.height * 0.45,
       child: new Column(
         children: <Widget>[
-          SizedBox(height: MediaQuery.of(context).size.height*0.03),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.03),
           Text("KDV Dahil",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -88,7 +88,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
               style: TextStyle(
                 fontSize: 18,
               )),
-          SizedBox(height: MediaQuery.of(context).size.height*0.035),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.035),
           Text("KDV Hariç",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
