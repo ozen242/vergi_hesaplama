@@ -7,7 +7,7 @@ class Calculator extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hesap Makinesi',
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      // theme: ThemeData(primarySwatch: Colors.blue),
     );
   }
 }
@@ -76,7 +76,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(0.0),
               side: BorderSide(
-                  color: Colors.white, width: 1, style: BorderStyle.solid)),
+                  color: Colors.black87, width: 1.2, style: BorderStyle.solid)),
           padding: EdgeInsets.all(12.0),
           onPressed: () => buttonPressed(buttonText),
           child: Text(
@@ -84,7 +84,28 @@ class _CalculatorPageState extends State<CalculatorPage> {
             style: TextStyle(
                 fontSize: 30.0,
                 fontWeight: FontWeight.normal,
-                color: Colors.white),
+                color: Colors.black),
+          )),
+    );
+  }
+   Widget buildButtonblue(
+      String buttonText, double buttonHeight, Color buttonColor) {
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.1 * buttonHeight,
+      color: buttonColor,
+      child: FlatButton(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(0.0),
+              side: BorderSide(
+                  color: Colors.black87, width: 1.2, style: BorderStyle.solid)),
+          padding: EdgeInsets.all(12.0),
+          onPressed: () => buttonPressed(buttonText),
+          child: Text(
+            buttonText,
+            style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.normal,
+                color: Colors.blue[800]),
           )),
     );
   }
@@ -92,10 +113,9 @@ class _CalculatorPageState extends State<CalculatorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[100],
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
-          title: Text('Hesap Makinesi'),
-          backgroundColor: Colors.deepPurple[700]),
+          title: Text('Hesap Makinesi'), backgroundColor: Colors.black87),
       body: Column(
         children: <Widget>[
           Container(
@@ -115,63 +135,68 @@ class _CalculatorPageState extends State<CalculatorPage> {
             ),
           ),
           Expanded(
-            child: Divider(),
+            child: Divider(
+
+                //color: Colors.black,
+                ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width * .75,
-                child: Table(
-                  children: [
-                    TableRow(children: [
-                      buildButton("C", 1, Colors.red[900]),
-                      buildButton("⌫", 1, Colors.red[900]),
-                      buildButton("÷", 1, Colors.blueGrey[800]),
-                    ]),
-                    TableRow(children: [
-                      buildButton("7", 1, Colors.deepPurple[500]),
-                      buildButton("8", 1, Colors.deepPurple[500]),
-                      buildButton("9", 1, Colors.deepPurple[500]),
-                    ]),
-                    TableRow(children: [
-                      buildButton("4", 1, Colors.deepPurple[500]),
-                      buildButton("5", 1, Colors.deepPurple[500]),
-                      buildButton("6", 1, Colors.deepPurple[500]),
-                    ]),
-                    TableRow(children: [
-                      buildButton("1", 1, Colors.deepPurple[500]),
-                      buildButton("2", 1, Colors.deepPurple[500]),
-                      buildButton("3", 1, Colors.deepPurple[500]),
-                    ]),
-                    TableRow(children: [
-                      buildButton(".", 1, Colors.deepPurple[500]),
-                      buildButton("0", 1, Colors.deepPurple[500]),
-                      buildButton("00", 1, Colors.deepPurple[500]),
-                    ]),
-                  ],
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: MediaQuery.of(context).size.width * .75,
+                  child: Table(
+                    children: [
+                      TableRow(children: [
+                        buildButtonblue("C", 1, Colors.white),
+                        buildButtonblue("×", 1, Colors.white),
+                        buildButtonblue("÷", 1, Colors.white),
+                      ]),
+                      TableRow(children: [
+                        buildButton("7", 1, Colors.blue[50]),
+                        buildButton("8", 1, Colors.blue[50]),
+                        buildButton("9", 1, Colors.blue[50]),
+                      ]),
+                      TableRow(children: [
+                        buildButton("4", 1, Colors.blue[50]),
+                        buildButton("5", 1, Colors.blue[50]),
+                        buildButton("6", 1, Colors.blue[50]),
+                      ]),
+                      TableRow(children: [
+                        buildButton("1", 1, Colors.blue[50]),
+                        buildButton("2", 1, Colors.blue[50]),
+                        buildButton("3", 1, Colors.blue[50]),
+                      ]),
+                      TableRow(children: [
+                        buildButton(".", 1, Colors.blue[50]),
+                        buildButton("0", 1, Colors.blue[50]),
+                        buildButton("00", 1, Colors.blue[50]),
+                      ]),
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.25,
-                child: Table(
-                  children: [
-                    TableRow(children: [
-                      buildButton("×", 1, Colors.blueGrey[800]),
-                    ]),
-                    TableRow(children: [
-                      buildButton("-", 1, Colors.blueGrey[800]),
-                    ]),
-                    TableRow(children: [
-                      buildButton("+", 1, Colors.blueGrey[800]),
-                    ]),
-                    TableRow(children: [
-                      buildButton("=", 2, Colors.green[900]),
-                    ]),
-                  ],
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.25,
+                  child: Table(
+                    children: [
+                      TableRow(children: [
+                        buildButtonblue("⌫", 1, Colors.white),
+                      ]),
+                      TableRow(children: [
+                        buildButtonblue("-", 1, Colors.white),
+                      ]),
+                      TableRow(children: [
+                        buildButtonblue("+", 1, Colors.white),
+                      ]),
+                      TableRow(children: [
+                        buildButton("=", 2, Colors.blue[600]),
+                      ]),
+                    ],
+                  ),
                 ),
-              )
-            ],
+              ],
+            ),
           ),
         ],
       ),

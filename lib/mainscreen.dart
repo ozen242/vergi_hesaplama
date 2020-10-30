@@ -11,10 +11,10 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[200],
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
         title: Text("KDV Hesaplama"),
-        backgroundColor: Colors.deepPurple[700],
+        backgroundColor: Colors.black87,
       ),
       body: Container(
         child: Center(
@@ -29,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
                       MaterialPageRoute(builder: (context) => CalculatorPage()),
                     );
                   },
-                  color: Colors.deepPurple[700],
+                  color: Colors.blue[900],
                   highlightColor: Colors.red[400],
                   textColor: Colors.white,
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 10)),
@@ -43,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
                           builder: (context) => KDVCalculatorPage()),
                     );
                   },
-                  color: Colors.deepPurple[700],
+                  color: Colors.blue[900],
                   highlightColor: Colors.red[400],
                   textColor: Colors.white,
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 10)),

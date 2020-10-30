@@ -43,7 +43,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
     return new Scaffold(
       // appBar: AppBar(
       //     title: Text('KDV Hesaplama'), backgroundColor: Colors.deepPurple[600]),
-      backgroundColor: Colors.deepPurple[100],
+      backgroundColor: Colors.blue[50],
       body: Container(
         height: MediaQuery.of(context).size.height * 0.85,
         child: SingleChildScrollView(
@@ -146,7 +146,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
                     kdvDahilOraniniHesapla(tutar, kdvOrani);
                     kdvHaricOraniniHesapla(tutar, kdvOrani);
                   },
-                  color: Colors.blueGrey[800],
+                  color: Colors.green[600],
                   textColor: Colors.white,
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 10))),
         ],
@@ -174,8 +174,8 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
                     kdvController.text = "18";
                   });
                 },
-                color:
-                    pressAttention18 ? Colors.blueGrey[700] : Colors.deepPurple,
+                color:Colors.blue[900],
+                   
                 textColor: Colors.white,
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10)),
           ),
@@ -195,9 +195,8 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
                     kdvController.text = "8";
                   });
                 },
-                color: pressAttention8
-                    ? Colors.blueGrey[600]
-                    : Colors.deepPurple[400],
+                color:Colors.blue[800],
+                   
                 textColor: Colors.white,
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10)),
           ),
@@ -217,9 +216,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
                     kdvController.text = "1";
                   });
                 },
-                color: pressAttention1
-                    ? Colors.blueGrey[500]
-                    : Colors.deepPurple[300],
+                color: Colors.blue[700],
                 textColor: Colors.white,
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10)),
           ),
@@ -239,17 +236,15 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
               borderSide: BorderSide(
-                color: Colors.deepPurple,
+                color: Colors.black54,
                 width: 2.0,
               ),
             ),
             labelText: 'KDV Oranını Girin', //Matrah hesaplaması için
             labelStyle: TextStyle(
-                color: myFocusNode.hasFocus
-                    ? Colors.deepPurple
-                    : Colors.grey[700]),
+                color: myFocusNode.hasFocus ? Colors.black : Colors.black),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey[700], width: 2.0)),
+                borderSide: BorderSide(color: Colors.black87, width: 2.0)),
           ),
           onChanged: (text) {
             setState(() {
@@ -276,12 +271,10 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
 
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(color: Colors.deepPurple, width: 2.0)),
+                borderSide: BorderSide(color: Colors.black87, width: 2.0)),
             labelText: 'Tutarı Girin',
             labelStyle: TextStyle(
-                color: myFocusNode.hasFocus
-                    ? Colors.deepPurple
-                    : Colors.grey[700]),
+                color: myFocusNode.hasFocus ? Colors.black : Colors.black),
 
             focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey[700], width: 2.0)),
