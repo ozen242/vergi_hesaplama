@@ -21,8 +21,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return MaterialApp(
+       debugShowCheckedModeBanner: false,
+        home: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/splashscreen.jpg'),

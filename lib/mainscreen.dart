@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vergi_hesaplama/screens/calculator.dart';
 import 'package:vergi_hesaplama/screens/kdv.dart';
+import 'package:vergi_hesaplama/service/advert_service.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -8,6 +9,15 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  
+  final AdvertService _advertService = AdvertService();
+  
+  @override
+  void initState() {
+    _advertService.showBanner();
+    super.initState();  //gerekli mi bilmiyorum !!!
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

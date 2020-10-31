@@ -4,7 +4,7 @@ class KDVCalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+     debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -236,7 +236,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
               borderSide: BorderSide(
-                color: Colors.black54,
+                color: Colors.black87,
                 width: 2.0,
               ),
             ),
@@ -277,7 +277,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
                 color: myFocusNode.hasFocus ? Colors.black : Colors.black),
 
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey[700], width: 2.0)),
+                borderSide: BorderSide(color: Colors.black87, width: 2.0)),
           ),
           onChanged: (text) {
             setState(() {
